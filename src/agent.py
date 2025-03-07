@@ -31,7 +31,7 @@ class ZerePyAgent:
             self.bio = agent_dict["bio"]
             self.traits = agent_dict["traits"]
             self.examples = agent_dict["examples"]
-            self.example_accounts = agent_dict["example_accounts"]
+            self.example_accounts = agent_dict.get("example_accounts", [])
             self.loop_delay = agent_dict["loop_delay"]
             self.connection_manager = ConnectionManager(agent_dict["config"])
             self.use_time_based_weights = agent_dict["use_time_based_weights"]
@@ -99,6 +99,7 @@ class ZerePyAgent:
         return weights
 
     def select_action(self, use_time_based_weights: bool = False) -> dict:
+        """Selects an action for the agent to perform."""
         task_weights = self.task_weights.copy()
         if use_time_based_weights:
             current_hour = datetime.now().hour
@@ -111,6 +112,22 @@ class ZerePyAgent:
         
         return action
 
+    def perform_action(self, connection: str, action: str, **kwargs) -> None:
+        """Execute an action using the connection manager."""
+        return self.connection_manager.perform_action(connection, action, **kwargs)
+
+    def loop(self):
+        """Main agent loop for autonomous behavior."""
+        logger.info("\n🚀 Starting agent loop...")
+        while True:
+            try:
+                action = self.select_action(use_time_based_weights=self.use_time_based_weights)
+                success = execute_action(self, action["name"])
+                time.sleep(self.loop_delay if success else 60)
+            except Exception as e:
+                logger.error(f"\n❌ Error in agent loop: {e}")
+                time.sleep(60)
+
     def prompt_llm(self, prompt: str, system_prompt: str = None) -> str:
         """Generate text using the configured LLM provider with layered response logic."""
         system_prompt = system_prompt or self._construct_system_prompt()
@@ -119,4 +136,4 @@ class ZerePyAgent:
             action_name="generate-text",
             params=[prompt, system_prompt]
         )
-        return f"💬 {raw_response}"  # Adding stylistic flair for Readymade.AI's personality
+        return f"💬 {raw_response}"  # Adding stylistic flair 
