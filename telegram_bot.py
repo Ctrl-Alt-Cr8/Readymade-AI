@@ -5,6 +5,10 @@ import logging
 import asyncio
 import random
 import nest_asyncio  # ✅ Fix for asyncio event loop issues
+from dotenv import load_dotenv  # ✅ Securely load environment variables
+
+# ✅ Load environment variables from .env
+load_dotenv()
 
 # ✅ Step 1: Set Environment Variable Early
 os.environ["TZ"] = "UTC"
@@ -39,8 +43,8 @@ print(f"✅ APScheduler created with timezone: {scheduler.timezone}")
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext, JobQueue
 
-# ✅ Your BotFather Token
-TELEGRAM_BOT_TOKEN = "7868398652:AAG7j-xITocFfdOz-JPfgclHn5QKbOir9aw"
+# ✅ Load TELEGRAM_BOT_TOKEN securely from .env
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 # ✅ Enable logging for debugging
 logging.basicConfig(format="%(asctime)s - %(levelname)s - %(message)s", level=logging.DEBUG)
