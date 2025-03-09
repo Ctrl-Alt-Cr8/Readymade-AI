@@ -4,3 +4,4 @@ datasets
 accelerate
 flask
 tzlocal
+nest_asyncio
