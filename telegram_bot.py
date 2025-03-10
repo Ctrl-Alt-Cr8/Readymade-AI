@@ -6,6 +6,8 @@ import asyncio
 import random
 import nest_asyncio  # ✅ Fix for asyncio event loop issues
 from dotenv import load_dotenv  # ✅ Securely load environment variables
+from flask import Flask
+from threading import Thread
 
 # ✅ Load environment variables from .env
 load_dotenv()
@@ -135,7 +137,24 @@ async def main():
 # ✅ Step 8: FIX the Event Loop Conflict using nest_asyncio
 nest_asyncio.apply()  # ✅ Apply fix for nested event loops
 
+# ✅ Create a minimal Flask server
+flask_app = Flask(__name__)
+
+@flask_app.route('/')
+def home():
+    return "Readymade AI is running!"
+
+def run_flask():
+    port = int(os.getenv("PORT", 8080))  # ✅ Cloud Run requires this
+    flask_app.run(host="0.0.0.0", port=port)
+
+# ✅ Run both Flask & Telegram Bot
 if __name__ == "__main__":
+    # Start Flask in a separate thread
+    flask_thread = Thread(target=run_flask)
+    flask_thread.start()
+
+    # Start the Telegram Bot
     try:
         loop = asyncio.get_running_loop()
         if loop.is_running():
