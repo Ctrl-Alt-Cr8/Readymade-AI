@@ -10,8 +10,5 @@ COPY . /app
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set environment variables
-ENV TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-
 # Run the bot
-CMD ["python", "telegram_bot.py"]
+CMD ["python", "bot.py"]
