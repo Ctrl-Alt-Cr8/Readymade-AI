@@ -13,5 +13,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Set Python path so imports work inside Docker
 ENV PYTHONPATH=/app
 
-# Run the automated tweet scheduler
-CMD ["python", "/app/src/automate_tweets.py"]
+# Expose the port
+EXPOSE 8080
+
+# Environment variable for port
+ENV PORT=8080
+
+# Run the Telegram bot with Flask server
+CMD ["python", "/app/bot.py"]
