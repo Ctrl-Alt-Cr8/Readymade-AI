@@ -13,8 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Set Python path so imports work inside Docker
 ENV PYTHONPATH=/app
 
-# Expose the port the app runs on
-EXPOSE 8080
-
-# Run the app
-CMD ["python", "/app/src/automate_tweets.py"]
+# Run the Discord bot
+CMD ["python", "discord_bot.py"]

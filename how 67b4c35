@@ -1,0 +1,66 @@
+* [33m17047ae[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Updated telegram bot to use AI engine
+* [33m44b9711[m Added AIEngine for dynamic OpenAI/Claude switching
+* [33ma625588[m Added ReadymadeAI.json for Readymade.AI persona and behavior
+* [33m743060b[m Ensured .env is ignored and updated dependencies
+* [33mcf45398[m Added nest_asyncio to fix missing module issue
+* [33m67b4c35[m Added tzlocal to fix missing module issue
+* [33mb47edbc[m Added Dockerfile for deployment
+* [33m82ff323[m Updated telegram bot to use environment variables for API security
+* [33m9bd4745[m Jailbroke Telegram bot integration and fixed async issues
+* [33ma480ac4[m Fixed agent behavior and added Twitter action execution
+* [33m9a0d9cb[m Fixed Twitter API integration and agent behavior
+* [33m52768d9[m Added requirements.txt with AI dependencies
+*   [33mb72c605[m Merge pull request #126 from blorm-network/monad2
+[32m|[m[33m\[m  
+[32m|[m * [33m1b39fa4[m lockfile
+[32m|[m * [33m77ec0b7[m zerepy is not a package
+[32m|[m * [33mf4111fc[m added verbose logging to swaps
+[32m|[m * [33maca8bcc[m added debug logging
+[32m|[m * [33m37f6ef2[m swaps sometimes saying api key not provided. api key is definitely provided and some have gone through
+[32m|[m * [33md9e7ed7[m fixed rpc
+[32m|[m * [33m9aad198[m added monad connection
+[32m|[m * [33m69d9307[m added monad connection and relevant cosmetics.
+[32m|[m[32m/[m  
+*   [33mdd6b8f2[m Merge pull request #116 from eternalai-org/eternalai
+[34m|[m[35m\[m  
+[34m|[m * [33m2da68c3[m - feat: eternalai support stream
+* [35m|[m   [33m5c1258c[m Merge pull request #119 from blorm-network/twitter_stream
+[36m|[m[1;31m\[m [35m\[m  
+[36m|[m * [35m|[m [33m57a8b24[m add bearer token to setup
+[36m|[m * [35m|[m [33m35005dd[m add handling optional var
+[36m|[m * [35m|[m [33m60517a1[m refactor make_request
+[36m|[m * [35m|[m [33mfde2a57[m prettify
+[36m|[m * [35m|[m [33med4c10b[m update env example
+[36m|[m * [35m|[m [33m4056aae[m add twitter stream , add respond_to_mentions in twitter actions
+* [1;31m|[m [35m|[m [33m486588c[m removed poetry shell from readme, this command has been removed from poetry stdlib
+* [1;31m|[m [35m|[m   [33mab60198[m Merge pull request #106 from donatik27/main
+[1;32m|[m[1;33m\[m [1;31m\[m [35m\[m  
+[1;32m|[m * [1;31m|[m [35m|[m [33md21e199[m Update prompts.py
+* [1;33m|[m [1;31m|[m [35m|[m   [33mb1438a0[m Merge pull request #118 from blorm-network:perplexity
+[1;31m|[m[1;35m\[m [1;33m\[m [1;31m\[m [35m\[m  
+[1;31m|[m [1;35m|[m[1;31m_[m[1;33m|[m[1;31m/[m [35m/[m  
+[1;31m|[m[1;31m/[m[1;35m|[m [1;33m|[m [35m|[m   
+[1;31m|[m * [1;33m|[m [35m|[m [33mfa3afa5[m connection manager
+[1;31m|[m * [1;33m|[m [35m|[m [33m73e4e47[m v1
+[1;31m|[m[1;31m/[m [1;33m/[m [35m/[m  
+* [1;33m|[m [35m|[m [33m52d86b0[m goat cli hotfix
+* [1;33m|[m [35m|[m   [33mf3a1cb4[m Merge pull request #117 from blorm-network/evmAdditions
+[35m|[m[31m\[m [1;33m\[m [35m\[m  
+[35m|[m [31m|[m[35m_[m[1;33m|[m[35m/[m  
+[35m|[m[35m/[m[31m|[m [1;33m|[m   
+[35m|[m * [1;33m|[m [33me57c1d5[m polygon works
+[35m|[m * [1;33m|[m [33m61dfc91[m fixed defualt back to reference agent
+[35m|[m * [1;33m|[m [33ma750d3d[m evm functionality + readme + env example + fixed scanner links + agent configs
+[35m|[m * [1;33m|[m [33m4c39f1d[m evm functionality intact
+[35m|[m[35m/[m [1;33m/[m  
+* [1;33m|[m   [33md315d03[m Merge pull request #112 from threewebcode/develop
+[32m|[m[33m\[m [1;33m\[m  
+[32m|[m * [1;33m|[m [33mad0fa55[m chore: add together AI information into readme file
+[32m|[m[32m/[m [1;33m/[m  
+* [1;33m/[m [33m7647d45[m added status endpoint to server mode
+[1;33m|[m[1;33m/[m  
+* [33m46e0ae9[m added barebones starter agent
+* [33med4f830[m moving import because that was gross
+* [33md3c3cc7[m handles multiword inputs
+* [33mdc9cf24[m added placeholder network for builders to easily add their own rpc
+* [33m4341b96[m comments and polish on sonic connection. making clear actions are meant to provide room for additional logic

@@ -1,0 +1,100 @@
+.
+├── Dockerfile
+├── Dockerfile.discord
+├── Dockerfile.telegram
+├── Dockerfile.twitter
+├── LICENSE
+├── README.md
+├── ReadymadeAI.json
+├── agents
+│   ├── ReadymadeAI.json
+│   ├── eternalai-example.json
+│   ├── example.json
+│   ├── general.json
+│   └── starter.json
+├── automate_tweets.py
+├── bot.py
+├── discord_bot.py
+├── how 67b4c35
+├── main.py
+├── poetry.lock
+├── pyproject.toml
+├── replit.nix
+├── requirements.txt
+├── src
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── action_handler.cpython-312.pyc
+│   │   ├── agent.cpython-312.pyc
+│   │   ├── cli.cpython-312.pyc
+│   │   ├── connection_manager.cpython-312.pyc
+│   │   └── prompts.cpython-312.pyc
+│   ├── action_handler.py
+│   ├── actions
+│   │   ├── __pycache__
+│   │   ├── echochamber_actions.py
+│   │   ├── eternalai_actions.py
+│   │   ├── ethereum_actions.py
+│   │   ├── solana_actions.py
+│   │   ├── sonic_actions.py
+│   │   └── twitter_actions.py
+│   ├── agent.py
+│   ├── ai_engine.py
+│   ├── automate_tweets.py
+│   ├── cli.py
+│   ├── connection_manager.py
+│   ├── connections
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   ├── allora_connection.py
+│   │   ├── anthropic_connection.py
+│   │   ├── base_connection.py
+│   │   ├── discord_connection.py
+│   │   ├── echochambers_connection.py
+│   │   ├── eternalai_connection.py
+│   │   ├── ethereum_connection.py
+│   │   ├── evm_connection.py
+│   │   ├── farcaster_connection.py
+│   │   ├── galadriel_connection.py
+│   │   ├── goat_connection.py
+│   │   ├── groq_connection.py
+│   │   ├── hyperbolic_connection.py
+│   │   ├── monad_connection.py
+│   │   ├── ollama_connection.py
+│   │   ├── openai_connection.py
+│   │   ├── perplexity_connection.py
+│   │   ├── rate_limit_manager.py
+│   │   ├── solana_connection.py
+│   │   ├── sonic_connection.py
+│   │   ├── together_connection.py
+│   │   ├── twitter_connection.py
+│   │   ├── twitter_connection_backup.py
+│   │   └── xai_connection.py
+│   ├── constants
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   ├── abi.py
+│   │   └── networks.py
+│   ├── custom_types
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   ├── helpers
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   └── solana
+│   ├── prompts.py
+│   ├── server
+│   │   ├── __init__.py
+│   │   ├── app.py
+│   │   └── client.py
+│   ├── svg_converter.py
+│   ├── twitter_mentions.py
+│   ├── twitter_mentions_polling.py
+│   └── visual_generator.py
+├── structure.txt
+├── test_twitter_credentials.py
+├── test_twitter_credentials_updated.py
+└── tweet_scheduler.py
+
+15 directories, 82 files

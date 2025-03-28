@@ -1,0 +1,12 @@
+{
+  "cyber_sigil": {
+    "shapes": ["circle", "rect", "line"],
+    "color_scheme": ["#000000", "#ffffff", "#ff00ff"],
+    "layout": "radial"
+  },
+  "glitch_grid": {
+    "shapes": ["line", "rect"],
+    "color_scheme": ["#222222", "#00ffcc", "#ffcc00"],
+    "layout": "grid"
+  }
+}
